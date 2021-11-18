@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Score-list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+  <body>
+       <!--header-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-$gray-100 fixed-top">
+      <!-- Container wrapper -->
+<div class="container-fluid">
+  <!-- Navbar brand -->
+  <a href="#" class="navbar-brand">Astana IT University</a>
+  <!-- Toggle button -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Collapsible wrapper -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <!-- Link -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Team </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scoreList">Score-List </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+    </nav>
+    <div id="home" class="banner">
+        <div class="container">
+            <h1 class="banner-title">
+                <span>FOOTBALL.</span>LIFE
+            </h1>
+            <p>Transformation into a basic structural center for information support of current educational, research and pedagogical processes and stimulation of their potential development, creating conditions for continuous acquisition and updating of knowledge focused on the needs of scientific and technological development of the promising future, a center for the dissemination of knowledge, spiritual and intellectual communication and culture.</p>
+          </div>
+    </div>
+</header>
+
+  <!--  ====================== SCORE LIST =============================  -->
+
+  <section id="scoreList" class="Score-List" id="ScoreList">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center scorelist-title">
+                <h1 class="text-uppercase title-text">Welcome to the Score-List</h1>
+                <p class="para">
+                    Here you will need to write the names of the players of the first and second teams, then you need to enter the number of goals scored for each team. You should know that each team shouldn't have greater than 11 players and the combined number of goals cannot be greater than 7.
+                </p>
+            </div>
+        </div>
+        <div class="container scorelist-list">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="score-list">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase">Team 1 Players</h5>
+                            <textarea id="text1" autofocus placeholder="Write here Team 1"></textarea><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="score-list">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase ">Team 2 Players</h5>
+                            <textarea id="text2" autofocus placeholder="Write here Team 2"></textarea><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="score-list">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase">How many goals scored the team 1(from 0 to 7):</h5>
+                            <input type="number" value="0" id="score1" min="0" max="7">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="score-list">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase">How many goals scored the team 2(from 0 to 7):</h5>
+                            <input type="number" value="0" id="score2" min="0" max="7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="button">
+    <button type="button" id="btn" class="btn btn-success" onclick="findWinner()">Show the Score</button>
+</div>
+<hr>
+<h2 id="tprice" style="font-size: 20px;">Who is the winner?</h2>
+<hr>
+
+<!--  ====================== End SCORE LIST=============================  -->
+      <!-----Contact-->
+      <div class="contact "id="contact"></div>
+      <footer>
+       <p>Social network</p>
+       <div class = "social-links">
+         <a href="https://twitter.com/">
+           <i class="fa fa-twitter"></i>
+         </a>
+         <a href="https://www.instagram.com/" >
+           <i class="fa fa-instagram" ></i>
+         </a>
+         <a href="https://github.com/AblaikhanZholdasbekov" >
+           <i class="fa fa-github"></i>
+         </a>
+         <a href="https://web.telegram.org/k/" >
+           <i class="fa fa-telegram"></i>
+         </a>
+       </div>
+       <p class="copyright">Copyright All Rights Reserved 2021, Astana IT University</p>
+      </footer>
+      
+      <!-- end of footer -->
+
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>      
+  </body>
+</html>
